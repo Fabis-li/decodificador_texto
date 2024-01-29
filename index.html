@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
     <title>Decodificardor de Texto</title>
 </head>
+
 <body>
-    <header>
-        <img class="logo_alura" src="./assets/alura.png" alt="logo alura">
-    </header>
-    <main class="">       
-        <input type="text" placeholder="Digite seu texto">
-        <p>Apenas letras minúsculas e sem acento</p>
-        <button>criptografar</button>
-        <button>Descriptografar</button>
-        <img src="./assets/High quality products 1 1.svg" alt="procurando">
-        <h1>Nenhuma mensagem encontrada</h1>
-        <p>Digite um texto que você deseja criptografar ou Descriptografar</p>
+    <header></header>
+    <main class="container">
+        <div class="logo">
+            <img class="logo_alura" src="./assets/alura.png" alt="logo alura">
+        </div>
+        <section class="container__page ">            
+            <textarea class="container__page_input">Digite seu texto</textarea>
+            <div class="container__page_aviso">
+                <p><img src="./assets/bi_exclamation-circle-fill.png" alt="aviso">
+                    Apenas letras minúsculas e sem acento
+                </p>
+            </div>
+            <div class="container__page_botao">
+                <button type="button" class="container_botao" id="criptografar">Criptografar</button>
+                <button type="button" class="container_botao" id="descriptografar">Descriptografar</button>
+            </div>
+        </section>
+        <section class="container__card">
+            <img src="./assets/High quality products 1 1.svg" alt="procurando">
+            <h1 class="container__card_texto">Nenhuma mensagem encontrada</h1>
+            <p class="container__card_inserir_texto">Digite um texto que você deseja criptografar ou Descriptografar</p>
+            <!-- <button type="button" class="container__card_botao" id="copiar">Copiar</button> -->
+        </section>
     </main>
-    <footer>
+    <footer class="rodape">
         <p>Desenvolvido por Fabiano Lima</p>
-        <a href="">Linkdein</a>
-        <a href="">Github</a>
-    </footer>    
+        <a class="rodape__redes"href="https://www.linkedin.com/in/fabiano-lima-1792173b/">
+            <img class="rodape__imagem" src="./assets/logo_linkedin.png" alt="logo linkedin">
+            Linkedin
+        </a>
+        <a class="rodape__redes" href="https://github.com/Fabis-li">
+            <img class="rodape__imagem" src="./assets/logo_github.png" alt="logo github">
+            Github
+        </a>
+    </footer>
+    <script src="index.js" defer></script>
 </body>
+
 </html>
