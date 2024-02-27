@@ -15,21 +15,21 @@
             <img class="logo_alura" src="./assets/alura.png" alt="logo alura">
         </div>
         <section class="container__page ">            
-            <textarea class="container__page_input">Digite seu texto</textarea>
+            <textarea class="container__page_input" id="textoDigitado">Digite seu texto</textarea>
             <div class="container__page_aviso">
                 <p><img src="./assets/bi_exclamation-circle-fill.png" alt="aviso">
                     Apenas letras minúsculas e sem acento
                 </p>
             </div>
             <div class="container__page_botao">
-                <button type="button" class="container_botao" id="criptografar">Criptografar</button>
-                <button type="button" class="container_botao" id="descriptografar">Descriptografar</button>
+                <button onclick="pegarTexto()" class="container_botao" id="criptografar">Criptografar</button>
+                <button onclick="descriptografarTexto()" class="container_botao" id="descriptografar">Descriptografar</button>
             </div>
         </section>
         <section class="container__card">
-            <img src="./assets/High quality products 1 1.svg" alt="procurando">
-            <h1 class="container__card_texto">Nenhuma mensagem encontrada</h1>
-            <p class="container__card_inserir_texto">Digite um texto que você deseja criptografar ou Descriptografar</p>
+            <img src="./assets/High quality products 1 1.svg" alt="procurando" id="procurando">
+            <h1 class="container__card_texto" id="card_texto">Nenhuma mensagem encontrada</h1>
+            <textarea class="container__card_inserir_texto" id="textoDescriptografado">Digite um texto que você deseja criptografar ou Descriptografar</textarea>
             <!-- <button type="button" class="container__card_botao" id="copiar">Copiar</button> -->
         </section>
     </main>
