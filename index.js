@@ -6,11 +6,6 @@ A letra "o" é convertida para "ober"
 A letra "u" é convertida para "ufat"
 */
 
-/* ToDo
-Remover o texto em area do card com a imagem
-inoputar o texto criptografado direto no card
-*/
-
 const textoCriptografar = [];
 const textoDescriptografar = [];
 
@@ -44,22 +39,16 @@ function limparTexto() {
     document.getElementById("textoDigitado").value = "";
     document.getElementById("card_texto").setAttribute("hidden", "true");
     document.getElementById("procurando").setAttribute("hidden", "true");
-    document.getElementById("textoDescriptografado").setAttribute("styke", "display: block;");
-
-    // document.getElementById("textoDescriptografado").innerHTML = "";
+    document.getElementById("textoDescriptografado").setAttribute("styke", "display: block;");    
 }
 
-function copiarTexto() {
-    const texto = document.getElementById("textoDescriptografado");
-    texto.select();
-    document.execCommand("copy");
-    alert("Texto copiado");
+function copiarTexto(){
+    const textoCopiado =  document.getElementById("textoDescriptografado").value;    
+    navigator.clipboard.writeText(textoCopiado);     
 }
 
-
-
-function descriptografarTexto (){
-    const texto = textoCriptografar[0];
+function descriptografarTexto(){ 
+    const texto = document.getElementById("textoDigitado").value;
     let textoDescriptografado = "";          
     const voltarTexto = texto
         .replace(/enter/g, "e")
@@ -68,11 +57,16 @@ function descriptografarTexto (){
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
 
-    textoDescriptografado = voltarTexto;
+    textoDescriptografado = voltarTexto;    
     textoDescriptografar.push(textoDescriptografado);    
-    const mostraTextoDescriptografado = document.getElementById("textoDigitado");
-    mostraTextoDescriptografado.innerHTML = textoDescriptografado;  
+    const mostraTextoDescriptografado = document.getElementById("textoDescriptografado");
+    mostraTextoDescriptografado.innerHTML = textoDescriptografar;     
     
 }
+
+
+
+
+
 
 
