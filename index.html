@@ -22,15 +22,15 @@
                 </p>
             </div>
             <div class="container__page_botao">
-                <button onclick="pegarTexto()" class="container_botao" id="criptografar">Criptografar</button>
-                <button onclick="descriptografarTexto()" class="container_botao" id="descriptografar">Descriptografar</button>
+                <button class="container_botao" onclick="pegarTexto()"  id="criptografar">Criptografar</button>
+                <button class="container_botao" onclick="descriptografarTexto()"  id="descriptografar">Descriptografar</button>
             </div>
         </section>
         <section class="container__card">
             <img src="./assets/High quality products 1 1.svg" alt="procurando" id="procurando">
             <h1 class="container__card_texto" id="card_texto">Nenhuma mensagem encontrada</h1>
             <textarea class="container__card_inserir_texto" id="textoDescriptografado">Digite um texto que você deseja criptografar ou Descriptografar</textarea>
-            <!-- <button type="button" class="container__card_botao" id="copiar">Copiar</button> -->
+            <button type="button" class="container__card_botao" onclick="copiarTexto()" id="copiar">Copiar</button>
         </section>
     </main>
     <footer class="rodape">
